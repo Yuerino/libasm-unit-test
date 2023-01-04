@@ -36,8 +36,7 @@ TEST(ft_strlenTest, StringWithEscapeChar) {
 }
 
 TEST(ft_strlenDeathTest, NullString) {
-    const char *str = NULL;
-    EXPECT_EXIT(ft_strlen(str), ::testing::KilledBySignal(SIGSEGV), ".*");
+    EXPECT_EXIT(ft_strlen(NULL), ::testing::KilledBySignal(SIGSEGV), ".*");
 }
 
 }
